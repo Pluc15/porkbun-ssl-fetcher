@@ -33,5 +33,4 @@ services:
 ```
 ssl_certificate /certificates/DOMAIN.chain.cert.pem;
 ssl_certificate_key /certificates/DOMAIN.private.key.pem;
-ssl_trusted_certificate /certificates/DOMAIN.intermediate.cert.pem;
 ```

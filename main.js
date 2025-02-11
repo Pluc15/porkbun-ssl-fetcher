@@ -22,9 +22,8 @@ async function updateCertificates() {
     }
   );
 
-  const { intermediatecertificate, certificatechain, privatekey, publickey } = response.data;
+  const { certificatechain, privatekey, publickey } = response.data;
 
-  await fs.writeFile(`/certificates/${DOMAIN}.intermediate.cert.pem`, intermediatecertificate);
   await fs.writeFile(`/certificates/${DOMAIN}.chain.cert.pem`, certificatechain);
   await fs.writeFile(`/certificates/${DOMAIN}.private.key.pem`, privatekey);
   await fs.writeFile(`/certificates/${DOMAIN}.public.key.pem`, publickey);
